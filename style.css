@@ -4,3 +4,30 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+header h1 {
+    font-size: 4vw;
+    text-align: center;
+    margin: 1vw 0;
+}
+
+#intro {
+    display: flex;
+    justify-content: center;
+}
+
+.person {
+    border: 1px solid black;
+    width: min-content;
+    margin: 1vw;
+}
+
+.person img {
+    height: 20vw;
+    border-radius: 10vw;
+    filter: brightness(0) invert(1) hue-rotate(1);
+}
+
+.person h1 {
+    text-align: center;
+}
