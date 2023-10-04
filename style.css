@@ -14,10 +14,10 @@ header h1 {
 #intro {
     display: flex;
     justify-content: center;
+    margin: 1vw 0;
 }
 
 .person {
-    border: 1px solid black;
     width: min-content;
     margin: 1vw;
 }
@@ -25,9 +25,59 @@ header h1 {
 .person img {
     height: 20vw;
     border-radius: 10vw;
-    filter: brightness(0) invert(1) hue-rotate(1);
+    filter: sepia(100%) saturate(200%) brightness(90%);
+}
+
+.person:nth-child(1) {
+    filter: hue-rotate(0deg);
+}
+.person:nth-child(2) {
+    filter: hue-rotate(310deg);
+}
+.person:nth-child(3) {
+    filter: saturate(70%) hue-rotate(80deg);
 }
 
 .person h1 {
     text-align: center;
+}
+
+body > img {
+    width: 100%;
+    box-shadow: 0 0 1vw black;
+    display: block;
+}
+
+#articles > .line {
+    background-color: black;
+    margin: 0 3vw;
+    height: 1vw;
+}
+
+#articles article:nth-of-type(1) .content {
+    background-color: #FFCC88;
+}
+
+#articles article:nth-of-type(2) .content {
+    background-color: #FFA9A0;
+}
+
+#articles article:nth-of-type(3) .content {
+    background-color: #BEFFB9;
+}
+
+article .line {
+    background-color: black;
+    margin: 0 3vw;
+    width: 1vw;
+}
+
+article {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+article .content {
+    padding: 2vw;
+    margin: 3vw 0;
 }
