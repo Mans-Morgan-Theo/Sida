@@ -5,6 +5,10 @@
     font-family: sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header h1 {
     font-size: 4vw;
     text-align: center;
@@ -40,6 +44,10 @@ header h1 {
 
 .person h1 {
     text-align: center;
+}
+
+.person h1 a {
+    color: inherit;
 }
 
 body > img {
@@ -80,4 +88,14 @@ article {
 article .content {
     padding: 2vw;
     margin: 3vw 0;
+}
+
+article .content h1 {
+    font-size: 3vw;
+    text-align: center;
+}
+
+article .content p {
+    font-size: 1.5vw;
+    text-align: justify;
 }
