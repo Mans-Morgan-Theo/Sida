@@ -52,8 +52,25 @@ header h1 {
 
 body > img {
     width: 100%;
+    height: 25vw;
+    object-fit: cover;
     box-shadow: 0 0 1vw black;
     display: block;
+}
+
+#history {
+    margin: 1vw;
+}
+
+#history h1 {
+    font-size: 3vw;
+    text-align: center;
+}
+
+#history p {
+    font-size: 1vw;
+    text-align: justify;
+    margin: 1vw 10vw;
 }
 
 #articles > .line {
