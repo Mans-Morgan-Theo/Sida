@@ -68,6 +68,7 @@ body>img {
     font-size: 3vw;
     text-align: center;
 }
+
 /* sorry måns*/
 h2 {
     font-size: 2vw;
@@ -134,4 +135,9 @@ article .content h1 {
 article .content p {
     font-size: 1.5vw;
     text-align: justify;
+}
+
+.end {
+    background-color: gray;
+    padding: 10vw;
 }
