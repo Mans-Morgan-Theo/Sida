@@ -35,9 +35,11 @@ header h1 {
 .person:nth-child(1) {
     filter: hue-rotate(0deg);
 }
+
 .person:nth-child(2) {
     filter: hue-rotate(310deg);
 }
+
 .person:nth-child(3) {
     filter: saturate(70%) hue-rotate(80deg);
 }
@@ -50,7 +52,7 @@ header h1 {
     color: inherit;
 }
 
-body > img {
+body>img {
     width: 100%;
     height: 25vw;
     object-fit: cover;
@@ -73,7 +75,7 @@ body > img {
     margin: 1vw 10vw;
 }
 
-#articles > .line {
+#articles>.line {
     background-color: black;
     margin: 0 3vw;
     height: 1vw;
@@ -105,6 +107,9 @@ article {
 article .content {
     padding: 2vw;
     margin: 3vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 article .content h1 {
