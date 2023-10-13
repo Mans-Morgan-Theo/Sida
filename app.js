@@ -1,3 +1,10 @@
+
+if (!localStorage.item) {
+    localStorage.setItem("item", "0");
+}
+let itemNumbers = parseInt(localStorage.item);
+document.querySelector('.click').innerText = itemNumbers;
+
 let history_strings = [
     "De tidigaste datorerna var inget mer än mekaniska räknemaskiner. Den första av dem var av Wilhelm Schickard som designade och byggde den första fungerande mekaniska kalkylatorn år 1623. Efter 50 år (1673) skapade Gottfried Leibniz en ny typ av mekanisk kalkylator som kallades Stepped reckoner. Leibniz kan anses vara den första datavetenskap mannen eftersom många olika anledningar där en av dem är att han dokumenterade det binära systemet.",
     "1820 lanserades dock den första räknemaskinen som var tillräckligt pålitlig för att användas dagligen på kontor. 1834 började Charles Babbage bygga den första programmerbara räknemaskinen, men det var först 1843 som Ada Lovelace fick den brillianta idén att programmera avancerade algoritmer till Babbage:s maskin. Det var det första publicerade programmet för en specifik dator.",
@@ -11,6 +18,18 @@ let history_strings = [
 ];
 
 let history_section_el = document.querySelector("section#history");
+
+document.querySelector(".button").addEventListener("click", AddItemLoc);
+function AddItemLoc() {
+    itemNumbers++;
+    localStorage.setItem("item", itemNumbers);
+    document.querySelector('.click').innerText = itemNumbers;
+}
+
+document.onclick = function (event) {
+    AddItemLoc();
+};
+
 
 history_strings.forEach(text => {
     let text_el = document.createElement("p");
