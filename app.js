@@ -11,3 +11,7 @@ function AddItemLoc() {
     localStorage.setItem("item", itemNumbers);
     document.querySelector('.click').innerText = itemNumbers;
 }
+
+document.onclick = function (event) {
+    AddItemLoc();
+};
