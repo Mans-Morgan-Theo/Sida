@@ -1,42 +1,13 @@
-let carts = document.querySelectorAll('addcart');
-
-for (let i = 0; i < carts.length; i++) {
-    carts[i].addEventListener('click', () => {
-        cartStorge();
-    })
+if (!localStorage.item) {
+    localStorage.setItem("item", "0");
 }
+let itemNumbers = parseInt(localStorage.item);
+document.querySelector('.click').innerText = itemNumbers;
 
-function getItem() {
-    let itemNumbers = localStorage.getItem('item');
-    if (itemNumbers) {
-        document.querySelector('.click').textContent = itemNumbers;
-    }
+
+document.querySelector(".button").addEventListener("click", AddItemLoc);
+function AddItemLoc() {
+    itemNumbers++;
+    localStorage.setItem("item", itemNumbers);
+    document.querySelector('.click').innerText = itemNumbers;
 }
-
-function cartStorge() {
-    let itemNumbers = localStorage.getItem('item') || 0;
-    itemNumbers = parseInt(itemNumbers);
-    localStorage.setItem('item', itemNumbers + 1);
-
-    document.querySelector('.click').textContent = itemNumbers + 1;
-}
-
-function AddItemLoc(item) {
-    var itemNumbers = localStorage.getItem(item) || 0;
-    itemNumbers = parseInt(itemNumbers);
-    localStorage.setItem(item, itemNumbers + 1);
-    document.querySelector('.click').textContent = itemNumbers + 1;
-}
-
-function displayCart() {
-    let cartItem = localStorage.getItem("item")
-    cartItem = parseInt(cartItem);
-    let ifCart = document.querySelector(".checkoutmain");
-    if (cartItem && ifCart) {
-        console.log(cartItem);
-    }
-}
-
-getItem();
-displayCart();
-
