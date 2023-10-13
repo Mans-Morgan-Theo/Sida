@@ -9,26 +9,34 @@ html {
     scroll-behavior: smooth;
 }
 
-header h1 {
-    font-size: 4vw;
+h1 {
     text-align: center;
-    margin: 1vw 0;
+}
+
+header h1 {
+    margin: 1vh 0;
 }
 
 #intro {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 1vw 0;
+    margin: 1vh 0;
 }
 
 .person {
-    width: min-content;
-    margin: 1vw;
+    margin: 1vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .person img {
-    height: 20vw;
-    border-radius: 10vw;
+    width: 40vh;
+    max-width: 90%;
+    aspect-ratio: 1;
+    border-radius: 50%;
     filter: sepia(100%) saturate(200%) brightness(90%);
 }
 
@@ -46,6 +54,7 @@ header h1 {
 
 .person h1, .person p {
     text-align: center;
+    width: 40vh;
 }
 
 .person h1 a {
@@ -54,42 +63,26 @@ header h1 {
 
 body>img {
     width: 100%;
-    height: 25vw;
+    height: 30vh;
     object-fit: cover;
     box-shadow: 0 0 1vw black;
     display: block;
 }
 
 #history {
-    margin: 1vw;
-}
-
-#history h1 {
-    font-size: 3vw;
-    text-align: center;
-}
-
-/* sorry måns*/
-h2 {
-    font-size: 2vw;
-    text-align: center;
-}
-
-h3 {
-    font-size: 1.5vw;
-    text-align: center;
+    margin: 1vh;
 }
 
 #history p {
-    font-size: 1vw;
-    text-align: justify;
-    margin: 1vw 15vw;
+    max-width: 80ch;
+    margin: auto;
+    margin-bottom: 1vh;
 }
 
 #articles>.line {
     background-color: black;
-    margin: 0 3vw;
-    height: 1vw;
+    margin: 0 2rem;
+    height: 0.5rem;
 }
 
 #articles article:nth-of-type(1) .content {
@@ -106,57 +99,36 @@ h3 {
 
 article .line {
     background-color: black;
-    margin: 0 3vw;
-    width: 1vw;
+    margin: 0 2rem;
+    min-width: 0.5rem;
 }
 
 article {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 article .content {
-    padding: 2vw;
-    margin: 3vw 0;
+    flex-grow: 1;
+    padding: 1vh;
+    margin: 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-article .content h1 {
-    font-size: 3vw;
-    text-align: center;
-}
-
 article .content p {
-    font-size: 1.5vw;
     text-align: justify;
     margin-bottom: 1rem;
-}
-
-article .content > * {
-    margin: 1vw 10vw;
-
+    max-width: 80ch;
 }
 
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+    justify-content: space-between;
 
-    background-color: rgb(230, 230, 230);
-    margin-top: auto;
+    padding: 2vh;
+    background-color: lightgray;
 }
-
-footer p {
-    background-color: #f5f5f5;
-}
-
-footer div {
-    text-align: center;
-    background-color: rgb(230, 230, 230);
-}
-
-footer img {
-    background-color: rgb(230, 230, 230);
-
