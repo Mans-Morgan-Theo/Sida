@@ -141,8 +141,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1%;
-    margin-left: 1%;
-    margin-right: 1%;
+
     background-color: rgb(230, 230, 230);
     margin-top: auto;
 }
