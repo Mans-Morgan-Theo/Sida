@@ -1,5 +1,5 @@
 name: Lighthouse Check
-on: [push]
+on: [pull_request]
 
 jobs:
   lighthouse-check:
