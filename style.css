@@ -44,7 +44,7 @@ header h1 {
     filter: saturate(70%) hue-rotate(80deg);
 }
 
-.person h1 {
+.person h1, .person p {
     text-align: center;
 }
 
@@ -80,14 +80,10 @@ h3 {
     text-align: center;
 }
 
-.scre {
-    padding-bottom: 1em;
-}
-
 #history p {
     font-size: 1vw;
     text-align: justify;
-    margin: 1vw 10vw;
+    margin: 1vw 15vw;
 }
 
 #articles>.line {
@@ -135,9 +131,9 @@ article .content h1 {
 article .content p {
     font-size: 1.5vw;
     text-align: justify;
+    margin-bottom: 1rem;
 }
 
-.end {
-    background-color: gray;
-    padding: 10vw;
+article .content > * {
+    margin: 1vw 10vw;
 }
