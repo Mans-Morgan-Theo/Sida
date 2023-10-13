@@ -44,7 +44,8 @@ header h1 {
     filter: saturate(70%) hue-rotate(80deg);
 }
 
-.person h1, .person p {
+.person h1,
+.person p {
     text-align: center;
 }
 
@@ -134,7 +135,7 @@ article .content p {
     margin-bottom: 1rem;
 }
 
-article .content > * {
+article .content>* {
     margin: 1vw 10vw;
 
 }
@@ -159,4 +160,4 @@ footer div {
 
 footer img {
     background-color: rgb(230, 230, 230);
-
+}
