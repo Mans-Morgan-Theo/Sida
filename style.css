@@ -52,7 +52,8 @@ header h1 {
     filter: saturate(70%) hue-rotate(80deg);
 }
 
-.person h1, .person p {
+.person h1,
+.person p {
     text-align: center;
     width: 40vh;
 }
